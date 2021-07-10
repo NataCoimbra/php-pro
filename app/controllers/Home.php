@@ -5,12 +5,9 @@ namespace app\controllers;
 class Home {
 
     public function index(){
-        var_dump('Home');
-        die();
-    }
-
-    public function create(){
-        var_dump('create');
-        die();
+        return [
+            'view' => 'home.php',
+            'data' => ['name' => 'Drake', 'teste' => 'testando']
+        ];
     }
 }
