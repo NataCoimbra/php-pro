@@ -4,10 +4,13 @@ namespace app\controllers;
 
 class Home {
 
-    public function index(){
+    public function index($params){
+
+        $users = all('users');
+
         return [
             'view' => 'home.php',
-            'data' => ['name' => 'Drake', 'teste' => 'testando']
+            'data' => ['title' => 'Home', 'users' => $users]
         ];
     }
 }
