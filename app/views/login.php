@@ -1,13 +1,8 @@
 <h2>Login</h2>
 
-<div id='box-login'>
-
-
-
-<form action="/login" method="post">
-    <input type="text" name="email" placeholder="Seu email">
-    <input type="password" name="password" placeholder="Sua senha">
+<?php echo getFlash('message'); ?>
+<form action="/login" method="POST" id='box-login'>
+    <input type="text" name="email" placeholder="Seu email" value='drake@gmail.com'>
+    <input type="password" name="password" placeholder="Sua senha" value='123456'>
     <button type="submit">Login</button>
 </form>
-
-</div>

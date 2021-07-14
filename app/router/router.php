@@ -70,5 +70,6 @@ function router(){
         return controller($matchedUri, $params);
     }
 
+
     throw new Exception('Algo deu errado');
 }

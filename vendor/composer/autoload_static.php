@@ -13,6 +13,8 @@ class ComposerStaticInit4fb0df0fcfabb45cd7345d507118633c
         '24b7c080ba278bacae8fb60a926cd7b8' => __DIR__ . '/../..' . '/app/database/connect.php',
         '953da64bdd73df627ff8270181b68384' => __DIR__ . '/../..' . '/app/database/fetch.php',
         '31c7eb04012075feb363a65425da349f' => __DIR__ . '/../..' . '/app/helpers/redirect.php',
+        '9ed9f75e35b753450abe572e5635571f' => __DIR__ . '/../..' . '/app/helpers/flash.php',
+        '124cdee7a07d61c2e7c7f1951f85eb6c' => __DIR__ . '/../..' . '/app/helpers/sessions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -31,8 +33,6 @@ class ComposerStaticInit4fb0df0fcfabb45cd7345d507118633c
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'app\\controllers\\Home' => __DIR__ . '/../..' . '/app/controllers/Home.php',
-        'app\\controllers\\User' => __DIR__ . '/../..' . '/app/controllers/User.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
