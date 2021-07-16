@@ -15,7 +15,7 @@ class Login{
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 
-        echo "<br>email: {$email} | senha: {$password} <br>";
+        // echo "<br>email: {$email} | senha: {$password} <br>";
 
         if(empty($email) || empty($password)){
             return setMessageAndRedirect('message', 'Usuário ou senha estão incorretos', '/login');
@@ -29,7 +29,10 @@ class Login{
 
         if(!password_verify($password, $user->password)){
             return setMessageAndRedirect('message', 'Usuário ou senha estão incorretos', '/login');
+            
         }
+
+       
 
         $_SESSION[LOGGED] = $user;
         return redirect('/'); 

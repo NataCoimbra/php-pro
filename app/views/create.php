@@ -1,5 +1,7 @@
 <h2>Create</h2>
 
+<?php echo getFlash('message'); ?><br>
+
 <form action="/user/store" method='post'>
     <input type="text" name="firstName" placeholder="Nome">
     <?php echo getFlash('firstName'); ?><br>

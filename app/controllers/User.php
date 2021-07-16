@@ -37,8 +37,17 @@ class User {
         }
 
 
-        var_dump($validate);
-        die();
+        $validate['password'] = password_hash($validate['password'], PASSWORD_DEFAULT);
+
+        $created = create('users', $validate);
+        var_dump($created);
+
+        if(!$created){
+            setFlash('message', 'Ocorreu um erro ao cadastrar, tente novamente em alguns segundos');
+            return redirect('/user/create');
+        }
+
+        return redirect('/');
     }
 
 }
