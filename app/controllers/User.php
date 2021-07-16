@@ -15,7 +15,30 @@ class User {
     }
 
     public function create($params){
-        var_dump($params["user"]);
+        
+        return [
+            'view' => 'create.php',
+            'data' => ['title' => 'Create']
+        ];
+    }
+
+
+    public function store(){
+        
+        $validate = validate([
+            'firstName' => 'required',
+            'lastName' => 'required',
+            'email' => 'email|unique:users',
+            'password' => 'required|maxlen:5'
+        ]);
+
+        if(!$validate){
+            return redirect('/user/create');
+        }
+
+
+        var_dump($validate);
         die();
     }
+
 }
